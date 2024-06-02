@@ -30,6 +30,8 @@ public class PostController {
         return postService.getAllPost(pageNo, pageSize);
     }
 
+
+    
     @GetMapping("/{id}")
     public ResponseEntity<PostDto> getPostById(@PathVariable(name = "id") long id) {
         return ResponseEntity.ok(postService.getPostById(id));
